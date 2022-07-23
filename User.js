@@ -6,7 +6,10 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     age: Number,
-    email: String,
+    email: {
+        type: String,
+        lowercase: true,
+    },
     createdAt: Date,
     updatedAt: Date,
     bestFriend: mongoose.SchemaTypes.ObjectId,
